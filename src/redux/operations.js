@@ -6,7 +6,7 @@ export const fetchNewCities = query => async dispatch => {
   dispatch(actions.fetchNewCitiesRequest());
 
   await axios
-    .get(`http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${ACCESS}`)
+    .get(`https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${ACCESS}`)
     .then(({ data }) => dispatch(actions.fetchNewCitiesSuccess(data)))
     .catch(error => dispatch(actions.fetchNewCitiesError(error)));
 };
@@ -23,7 +23,7 @@ export const addToMyLibrary = (lat, lon) => async (dispatch, getState) => {
         dispatch(actions.changePopupSeverity('warning'));
         dispatch(actions.changePopupText('You have this city in the Library'));
         dispatch(actions.isOpenPopup());
-
+        dispatch(actions.addToMyLibraryError());
         return;
       }
 

@@ -42,6 +42,32 @@ const popupTextReducer = createReducer('Adding to your Library', {
   [actions.changePopupText]: (_, { payload }) => payload,
 });
 
+export const loadingReducer = createReducer(false, {
+  [actions.addToMyLibraryRequest]: () => true,
+  [actions.addToMyLibrarySuccess]: () => false,
+  [actions.addToMyLibraryError]: () => false,
+
+  [actions.updateMyLibraryItemRequest]: () => true,
+  [actions.updateMyLibraryItemSuccess]: () => false,
+  [actions.updateMyLibraryItemError]: () => false,
+
+  [actions.deleteMyLibraryItemRequest]: () => true,
+  [actions.deleteMyLibraryItemSuccess]: () => false,
+  [actions.deleteMyLibraryItemError]: () => false,
+
+  [actions.fetchNewCitiesRequest]: () => true,
+  [actions.fetchNewCitiesSuccess]: () => false,
+  [actions.fetchNewCitiesError]: () => false,
+
+  [actions.fetchCurrentWeatherByIdRequest]: () => true,
+  [actions.fetchCurrentWeatherByIdSuccess]: () => false,
+  [actions.fetchCurrentWeatherByIdError]: () => false,
+
+  [actions.fetchForecastWeatherByIdRequest]: () => true,
+  [actions.fetchForecastWeatherByIdSuccess]: () => false,
+  [actions.fetchForecastWeatherByIdError]: () => false,
+});
+
 export default combineReducers({
   newCities: newCitiesReducer,
   myLibraryArray: myLibraryReducer,
@@ -50,4 +76,5 @@ export default combineReducers({
   openPopup: openPopupReducer,
   popupSeverity: popupSeverityReducer,
   popupText: popupTextReducer,
+  loading: loadingReducer,
 });
