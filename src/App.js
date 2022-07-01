@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <AppRouter />
       <MyPopup />
-      {isLoading && <Puff color="#ff3a00" height={80} width={80} />}
+      {isLoading && <Puff color="#1976d2" height={80} width={80} />}
     </div>
   );
 }
