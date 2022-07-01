@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pet_project_weather/static/css/main.09fa83be.css",
+    "main.js": "/pet_project_weather/static/js/main.18cd9678.js",
+    "index.html": "/pet_project_weather/index.html",
+    "main.09fa83be.css.map": "/pet_project_weather/static/css/main.09fa83be.css.map",
+    "main.18cd9678.js.map": "/pet_project_weather/static/js/main.18cd9678.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09fa83be.css",
+    "static/js/main.18cd9678.js"
+  ]
+}
